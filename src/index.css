@@ -1,0 +1,126 @@
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+} */
+
+@font-face {
+  font-family: 'exo';
+  font-style: normal;
+  src: local('code'), url('/fonts/Exo2-Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'code';
+  font-style: normal;
+  src: local('code'), url('/fonts/Neutra Display Titling.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'sans';
+  font-style: normal;
+  src: local('sans'), url('/fonts/FangZhengHeiTiJianTi.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  /* background-color: #EFEFEF; */
+  background-color: #FFFFFF;
+}
+
+.animated-button {
+  animation: buttonAnimation 4s linear infinite;
+}
+
+@keyframes buttonAnimation {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    box-shadow: none;
+  }
+  5% {
+    transform: scale(1.05) rotate(20deg);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  10% {
+    transform: scale(1.05) rotate(-20deg);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  15% {
+    transform: scale(1.05) rotate(20deg);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  20% {
+    transform: scale(1.05) rotate(-20deg);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  25% {
+    transform: scale(1) rotate(0deg);
+    box-shadow: none;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.card {
+  border-width: 1px;
+  border-radius: 12px;
+  border-color: rgb(226 228 233 / 1);
+  box-shadow: 0px 4px 7px 0px #00000008;
+}
+
+.shadow-card {
+  box-shadow: 0px 4px 7px 0px #00000008;
+}
+
+.blur-circle {
+  -webkit-filter: blur(70px);
+  filter: blur(70px);
+}
+
+.fillsvg-white * {
+  fill: #ffffff
+}
+
+/* Thumb: Chrome, Safari, Opera, Edge Chromium */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 15px;
+  width: 15px;
+  background-color: #2563EB;
+  border-radius: 50%;
+}
+
+@supports ((-webkit-filter: initial) or (filter: initial)){
+  .blur-img-webkit {
+    --globalnav-filter: blur(24px);
+  }
+}
+
+.blur-img {
+  -webkit-filter: blur(24px);
+  filter: blur(24px);
+}
+
+@supports ((-webkit-filter: initial) or (filter: initial)){
+  .blur-img-webkit-sm {
+    --globalnav-filter: blur(10px);
+  }
+}
+
+.blur-img-sm {
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
